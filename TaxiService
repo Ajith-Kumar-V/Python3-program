@@ -1,0 +1,50 @@
+def info():
+  print("\nCustomer Details:\n","Name:",Name,"\n","ID:",ID,"\n","Startinjg point:",origin,"\n","Destination:",Destination,"\n","Distance Travelled:",distance,"Km")
+  if Category==1:
+    print(" Mode of travel : Bike")
+  elif Category==2:
+    print(" Mode of travel : Auto")
+  elif Category==3:
+    print(" Mode of travel : Bus")
+  elif Category==4:
+    print(" Mode of travel : Car")
+  print(" Amount :",value)
+Name=input("Enter your Name : ")
+ID=input("Enter your ID : ")
+origin=input("Enter the starting point : ")
+Destination=input("Enter the Destination point : ")
+if (("+" in origin) | ("+" in Destination)):
+    print("Provide a valid inputs")
+else:
+  starter=round(float(origin))
+  ender=round(float(Destination))
+  distance=ender-starter
+  gh=type(starter)
+  df=type(ender)
+  if (starter>=0 & ender>=0 & 0<distance):
+    Typeoftravel=input(" Choose 1 for bike \n Choose 2 for Auto \n Choose 3 for Bus \n Choose 4 for car : ")
+    Category=int(Typeoftravel)
+    Bike=1
+    Auto=2
+    Bus=3
+    Car=4
+    if Category==1:
+      value=(distance*10)
+      print("You have been charged Rs.",value)
+      info()
+    elif Category==2:
+      value=(distance*20)
+      print("You have been charged Rs.",value)
+      info()
+    elif Category==3:
+      value=(distance*30)
+      print("You have been charged Rs.",value)
+      info()
+    elif Category==4:
+      value=(distance*50)
+      print("You have been charged Rs.",value)
+      info()
+    else:
+      print("Not available.")
+  else:
+    print("Provide a valid location")
