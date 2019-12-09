@@ -1,0 +1,21 @@
+from tkinter import *
+from tkinter import messagebox
+#import MySQLdb as sql
+root=Tk()
+root.title("Devloped")
+#root.geometry("400x400")
+t=Label(root,text="Login Form",font=("Bell MT",15),bd=15)
+t.pack()
+form=Frame(root)
+form.pack(side=TOP, fill=X)
+nameL=Label(form, text="Name :" , font=("Times New Roman",12))
+passL=Label(form, text="Password :" , font=("Times New Roman",12))
+nameL.grid(row=1,sticky=W)
+passL.grid(row=2,sticky=W)
+nameL=Entry(form)
+passL=Entry(form,show="*")
+nameL.grid(row=1,coloumn=2)
+passL.grid(row=2,coloumn=2)
+login=Button(root,text="Login")
+login.pack()
+root.mainloop()
