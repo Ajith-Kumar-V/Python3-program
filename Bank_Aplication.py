@@ -52,6 +52,18 @@ while True:
     print("\t\tProvide a valid mail id")
     continue
 while True:
+  Con=input("Enter your Contact number : ")
+  if len(Con)==10:
+    if Con.index('9')==0:
+      print("Valid Number")
+      break
+    else:
+      print("\tEnter a number statring with 9")
+      continue
+  else:
+    print("\tProvide 10 Numbers")
+    continue
+while True:
   Pass=input("Enter your password : ")
   if '!' in Pass or '@' in Pass or '#' in Pass or '$' in Pass or '%' in Pass or '&' in Pass or '*' in Pass:
     if '1' in Pass or '2' in Pass or '3' in Pass or '4' in Pass or '5' in Pass or '6' in Pass or '7' in Pass or '8' in Pass or '9' in Pass or '0' in Pass:
